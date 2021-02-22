@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>orizinalsite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="waitMe/waitMe.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="waitMe/waitMe.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="wrapper">
+  <div class="search">
+    <form>
+      <div class="search_container">
+        <input type="text" id="freeword"  size="28" placeholder="キーワードを入力してください">
+        <button onclick="searchclick(event);" class="search-icon"><i class="fas fa-search"></i></button>
+      </div>
+    </form>
+    <section id="restlist" class="hidden">
+      
+      <div v-for="information in informations" class="restlist_item">
+        <a
+          v-bind:href="information.pageURL"
+          target="_blank"
+        >
+          <div class="frame">
+            <img
+              v-bind:src="information.imageURL"
+              width="150"
+              height="150"
+            >
+          </div>
+          <br>
+          {{information.name}}
+        </a>
+      </div>
+    </section>
+    <div id="container"></div>
+  </div>
+  
+    <div id="map"></div>
+<script>
+
+// 現在地取得処理
+/*function getPosition(centerlat,centerlng) {
+  // 現在地を取得
+  navigator.geolocation.getCurrentPosition(
+    // 取得成功した場合
+    function(position) {
+      console.log("緯度:"+position.coords.latitude+",経度"+position.coords.longitude);
+      centerlat=parseFloat(position.coords.latitude);
+      centerlng=parseFloat(position.coords.longitude);
+      console.log(centerlat);
+    },
+    // 取得失敗した場合
+    function(error) {
+      switch(error.code) {
+      case 1: //PERMISSION_DENIED
+        alert("位置情報の利用が許可されていません");
+        break;
+      case 2: //POSITION_UNAVAILABLE
+        alert("現在位置が取得できませんでした");
+        break;
+      case 3: //TIMEOUT
+        alert("タイムアウトになりました");
+        break;
+      default:
+        alert("その他のエラー(エラーコード:"+error.code+")");
+        break;
+      }
+    }
+  );
+}*/
+let map;
+let centerlat;
+let centerlng;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 35.681, lng: 139.76},
+    zoom: 12
+  });
+  //情報ウィンドウのインスタンスの生成
+  let infoWindow = new google.maps.InfoWindow; 
+  
+  //ブラウザが Geolocation に対応しているかを判定
+  //対応していない場合の処理
+  if(!navigator.geolocation){ 
+    //情報ウィンドウの位置をマップの中心位置に指定
+    infoWindow.setPosition(map.getCenter());
+    //情報ウィンドウのコンテンツを設定
+    infoWindow.setContent('Geolocation に対応していません。');
+    //情報ウィンドウを表示
+    infoWindow.open(map);
+  }
+  
+  //ブラウザが対応している場合、position にユーザーの位置情報が入る
+  navigator.geolocation.getCurrentPosition(function(position) { 
+    //position から緯度経度（ユーザーの位置）のオブジェクトを作成し変数に代入
+    let pos = {  
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    };
+    //情報ウィンドウに現在位置を指定
+    infoWindow.setPosition(pos);
+    //情報ウィンドウのコンテンツを設定
+    infoWindow.setContent('現在位置を取得しました。');
+    //情報ウィンドウを表示
+    infoWindow.open(map);
+    //マップの中心位置を指定
+    map.setCenter(pos);
+  
+  }, function() {  //位置情報の取得をユーザーがブロックした場合のコールバック
+    //情報ウィンドウの位置をマップの中心位置に指定
+    infoWindow.setPosition(map.getCenter());
+    //情報ウィンドウのコンテンツを設定
+    infoWindow.setContent('Error: Geolocation が無効です。');
+    //情報ウィンドウを表示
+    infoWindow.open(map);
+  });   
+
+}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWqc2vEJ0XFISvOJwCcapYVT7L9hP8EF4&callback=initMap"
+    async defer></script>
+    <div class="hidden details" id="detail">
+      <span class="close-icon"><i class="far fa-window-close"></i></span>
+      <div class="details_item">
+        <!--<p><span class="color_change">店舗名称:</span>{{currentInfo.name}}</p>
+        <p><span class="color_change">住所:</span>{{currentInfo.address}}</p>
+        <p><span class="color_change">電話番号:</span>{{currentInfo.tel}}</p>
+        <p><span class="color_change">営業時間:</span>{{currentInfo.opentime}}</p>
+        <p><span class="color_change">休業日:</span>{{currentInfo.holiday}}</p>
+        <p><span class="color_change">最寄り駅:</span>{{currentInfo.access}}</p>-->
+        <table>
+          <tr>
+            <th>店舗名称</th>
+            <td>{{currentInfo.name}}</td>
+          </tr>
+          <tr>
+            <th>住所</th>
+            <td>{{currentInfo.address}}</td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td>{{currentInfo.tel}}</td>
+          </tr>
+          <tr>
+            <th>営業時間</th>
+            <td>{{currentInfo.opentime}}</td>
+          </tr>
+          <tr>
+            <th>休業日</th>
+            <td>{{currentInfo.holiday}}</td>
+          </tr>
+          <tr>
+            <th>最寄り駅</th>
+            <td>{{currentInfo.access}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+</div>
+<div id="loading">
+  <div class="sk-chase">
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+</div>
+</div>
+</div>
+<footer>
+  Supported by <a href="https://api.gnavi.co.jp/api/scope/" target="_blank">ぐるなびWebService</a>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>
+
+</body>
+
+</html>
