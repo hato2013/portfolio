@@ -1,0 +1,7 @@
+まずこのツールはメルカリの自分が売った商品情報をgooglespreadsheetにまとめるものである。
+次にgcpを開きdriveとspreadsheetのapiを有効にしてGoogle Spread Sheetの共有設定も済ませjsonfileとspreadsheet_keyを取得する（下記のURL参照）
+https://qiita.com/164kondo/items/eec4d1d8fd7648217935
+merukari_work0313を開き取得したjsonfileとspreadsheet_keyに書き換える（change_pointと書かれている）
+コマンドでpython merukari_work0313と入力する
+メルカリのページが開くのでログインする
+すると共有したシートに自分が売った商品の情報が書き込まれる
