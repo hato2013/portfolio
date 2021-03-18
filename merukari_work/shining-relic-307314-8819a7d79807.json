@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shining-relic-307314",
+  "private_key_id": "8819a7d798071723fd7a641e2972a88c9054ca01",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCITo/6AWSeWjpI\nosIwhOX76npt6LVGQ7U/2r9sFwYdQfIVRWm/e9Q8OmPnjHbulJJl6MYMz0CmbuS5\nFgNUhwODm55DdWjhtFjja9WiA4yLZB1hrn4bZR/3ZFEa8jkwzy0yeYD5reduPQ9d\nY50YJoXJdurUP2GhaJTZolBqjjYNXSQ58rTsE6nbf2uuNDR+1ndlb41RN7QOSDRJ\nCKTN3xGKNq5KnQBVXxJ3vhUgZ5Cckd02Ba/qUukOLL+PEHVQbFJx0AnECxdoDA6A\nA3lR6JDJckUrDiz2tqxDZF/y00rGxz1Kl4GnkCQFMsHfIuz3JhEv+mHR6rEobPiH\nWqmVAcGhAgMBAAECggEAN3oONFkzzBV6Ck0gDyJP/n95E9m2SeJN1y7fYQ1f4jGQ\nZ2LoftRV1auINNohH8pdaVfbn6QMspCIy+HvOgx3fC2utNMI/G/sC6e8e+PI5IS7\nRqH/1oOKhqSQNBDpAPoZcaUtPrGuc1orsj1UV1t6cTxSqE8hm9GWX5ul8jBuRHKP\nqsKmqWXqb7JLZdP/bLXGRf7Fc8bctDN+nD6m5kF8g65kWxM9nEtuwcGcDb4LBBDH\nKtUpixb/l3ixbtfx7wEUSR1fy9/EkEKu8KfRB3gHNJp2wJDl1O7uOAR4mrdDX1di\nCAgNC5/5rXIRaWBcmgegqweupX2zCH6Rsd8MEA4zhwKBgQC/3G/QEWzBib9gD8Ob\n3NeV+IjwpS5sJ5xWsTdy3PHeLx71grSklnqsbJnj9be2laBez6pJAo/NpEZ/U6Wy\nhspCPteNnQSW+iR+xkQvcWZtlrKTYCyFDVKRIUziUGmCNwwiblrb4h/YD2w6edvE\n5iu7V2ZmPE8ToRXK96kOezsEJwKBgQC138VX4VJPwrOQGO3wC5JLTYkfc9NC4/oy\nnsIrMyGpuH8wDzdpWsoXXG8POzQPY26Yb9iJMKthVjs4Bp4JsxVhNwJ6E7Ww5E6Z\nRF8jfmHuZ9wnEIeFhnsnLH0my0keC7WfA7OB7q3Y/yZivQQbuZSZeTuT/xnIzVgR\nmDp8kyFA9wKBgQCXbFcjFF2NcjYEjuyHOwk7Z+hMZVH6MlkFYuCsWwzZmr8IbZw8\nujcflqbub6QLCpSDv8pZzRfJ6XlqTI5eFFvVZNui/OX+cnYTSE/QUePRYjqWbjU0\n3Yro2CtiAq0DBIcjNY2oNROE5sc4b6yv/ilNtnEvBzIx/9S/WC+pKkEtyQKBgAzq\nXStGdv/vBa1f99WqHLN4SBqRsRj485WQrJ1Avk09KtsQ2ZCDwAI0sDZWr/W/y+TL\nXIcxi5oX85Cg96wcqZIDxAtDRw3OyL4dmtv8Z5v0iC/F/rm+uRQpFqIgoYqerkEi\nlCbP+kyEogc1AQuu/ByB/XcfEIev/WcSdmTOVfg1AoGARxunZ0v0ttivgFfXsBYc\nGdXGL4Mn/Vsb1zjeqGTUKubVT05/BfNL/pT7qKAoGWnbqSxt/ddo3wd34jwDvjrT\nG4d2OGEMhOIJ9YP5tC7FVr1IBvP+ZGuv3MKdtXnYxNWAzmBPjSUB3ZRug9rA1PeF\nqLgdUnltPe9tMQFJNgHbkWI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-python@shining-relic-307314.iam.gserviceaccount.com",
+  "client_id": "110848845675963769962",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-python%40shining-relic-307314.iam.gserviceaccount.com"
+}
