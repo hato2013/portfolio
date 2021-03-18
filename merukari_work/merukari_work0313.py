@@ -115,12 +115,13 @@ scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/aut
 
 #認証情報設定
 #ダウンロードしたjsonファイル名をクレデンシャル変数に設定（秘密鍵、Pythonファイルから読み込みしやすい位置に置く）
+#ここに自分の取得したjsonファイルを入力する(change_point)
 credentials = ServiceAccountCredentials.from_json_keyfile_name(r'C:\Users\okefu\Downloads\shining-relic-307314-ef4ad4a33ab7.json', scope)
 
 #OAuth2の資格情報を使用してGoogle APIにログインします。
 gc = gspread.authorize(credentials)
 
-#共有設定したスプレッドシートキーを変数[SPREADSHEET_KEY]に格納する。
+#共有設定したスプレッドシートキーを変数[SPREADSHEET_KEY]に格納する。(change_point)
 SPREADSHEET_KEY = '1hT6pS7Yp8p346KyX2yFxcXzgL5PqjWH9qBY_8P02SAw'
 
 #共有設定したスプレッドシートのワークシート1を開く
