@@ -1,0 +1,8 @@
+=============== Jul 4, 2021 (JST) ===============
+15:01:47.695183 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:01:47.711710 db@open opening
+15:01:47.713630 version@stat F·[] S·0B[] Sc·[]
+15:01:47.719479 db@janitor F·2 G·0
+15:01:47.719559 db@open done T·7.7795ms
+15:16:26.638429 db@close closing
+15:16:26.639192 db@close done T·755.1µs

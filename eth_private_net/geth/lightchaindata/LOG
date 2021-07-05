@@ -1,0 +1,60 @@
+=============== Jul 4, 2021 (JST) ===============
+10:53:55.526172 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:53:55.554042 db@open opening
+10:53:55.557288 version@stat F·[] S·0B[] Sc·[]
+10:53:55.564201 db@janitor F·2 G·0
+10:53:55.564379 db@open done T·10.1233ms
+10:53:55.568978 db@close closing
+10:53:55.570970 db@close done T·1.9734ms
+=============== Jul 4, 2021 (JST) ===============
+13:41:03.136500 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:41:03.143797 version@stat F·[] S·0B[] Sc·[]
+13:41:03.144317 db@open opening
+13:41:03.145276 journal@recovery F·1
+13:41:03.161036 journal@recovery recovering @1
+13:41:03.174604 memdb@flush created L0@2 N·10 S·536B "H{...~\x042,v3":"r\x00\x00..~\x042,v5"
+13:41:03.188078 version@stat F·[1] S·536B[536B] Sc·[0.25]
+13:41:03.246453 db@janitor F·3 G·0
+13:41:03.246638 db@open done T·102.1861ms
+13:41:03.250662 db@close closing
+13:41:03.252897 db@close done T·2.2212ms
+=============== Jul 4, 2021 (JST) ===============
+13:45:12.544590 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:45:12.546495 version@stat F·[1] S·536B[536B] Sc·[0.25]
+13:45:12.546678 db@open opening
+13:45:12.547056 journal@recovery F·1
+13:45:12.548465 journal@recovery recovering @3
+13:45:12.560359 memdb@flush created L0@5 N·1 S·261B "eth..~\x042,v12":"eth..~\x042,v12"
+13:45:12.576676 version@stat F·[2] S·797B[797B] Sc·[0.50]
+13:45:12.612701 db@janitor F·4 G·0
+13:45:12.612812 db@open done T·66.0863ms
+13:45:12.614853 db@close closing
+13:45:12.615863 db@close done T·986.9µs
+=============== Jul 4, 2021 (JST) ===============
+13:50:08.268637 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:50:08.272999 version@stat F·[2] S·797B[797B] Sc·[0.50]
+13:50:08.273227 db@open opening
+13:50:08.273750 journal@recovery F·1
+13:50:08.275380 journal@recovery recovering @6
+13:50:08.284449 memdb@flush created L0@8 N·1 S·261B "eth..~\x042,v14":"eth..~\x042,v14"
+13:50:08.302813 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+13:50:08.330989 db@janitor F·5 G·0
+13:50:08.331393 db@open done T·58.0905ms
+13:50:08.337194 db@close closing
+13:50:08.338352 db@close done T·1.1491ms
+=============== Jul 4, 2021 (JST) ===============
+13:56:09.304058 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:56:09.305330 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+13:56:09.305541 db@open opening
+13:56:09.305965 journal@recovery F·1
+13:56:09.307418 journal@recovery recovering @9
+13:56:09.317418 memdb@flush created L0@11 N·1 S·261B "eth..~\x042,v16":"eth..~\x042,v16"
+13:56:09.330537 version@stat F·[4] S·1KiB[1KiB] Sc·[1.00]
+13:56:09.352973 db@janitor F·6 G·0
+13:56:09.353053 db@open done T·47.4672ms
+13:56:09.353163 table@compaction L0·4 -> L1·0 S·1KiB Q·17
+13:56:09.355011 db@close closing
+13:56:09.361860 table@build created L1@14 N·10 S·536B "H{...~\x042,v3":"r\x00\x00..~\x042,v5"
+13:56:09.362012 table@build exiting
+13:56:09.362158 table@build revert @14
+13:56:09.366283 db@close done T·11.2645ms
